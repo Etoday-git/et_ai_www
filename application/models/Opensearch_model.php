@@ -166,22 +166,6 @@ class Opensearch_model extends CI_Model {
             ]
         ];
 
-
-        // if (($from + $size) > 10000) {
-        //     log_message('warning', 'OpenSearch: from + size exceeds 10,000 limit');
-        //     $size = max(0, 10000 - $from);
-        // }
-
-        // $search_body = [
-        //     'query' => $query,
-        //     'from' => $from,
-        //     'size' => $size,
-        //     'sort' => [
-        //         ['rcept_no' => ['order' => 'desc']]
-        //     ],
-        //     'track_total_hits' => true
-        // ];
-
         $url = 'https://' . $this->domain . '/' . $this->index . '/_search';
         
         $ch = curl_init();
