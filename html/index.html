@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/base.css" type="text/css">
+    <script type="text/javascript" src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/plugins/gsap/gsap.min.js" type="text/javascript"></script>
+    <!-- daterange picker -->
+	<link rel="stylesheet" href="/assets/plugins/daterange/daterangepicker.min.css">
+    <script src="/assets/plugins/daterange/moment.js"></script>
+	<script src="/assets/plugins/daterange/jquery.daterangepicker.js"></script>
+    <!-- swiper slider -->
+    <link rel="stylesheet" type="text/css" href="/assets/plugins/swiper/swiper.min.css">
+    <script type="text/javascript" src="/assets/plugins/swiper/swiper.min.js"></script>
+    <!-- Highcharts -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/page.css" type="text/css">
+</head>
+<body>
+    <div id="etoday" class="mainpage">
+        <header class="headerWrap">
+            <div class="header_contents_wrap">
+                <h1 class="logo"><a href="/">이투데이</a></h1>
+                <p class="header_desc">공시자료 기반 실시간 기업지배구조 AI분석</p>
+
+                <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="#" onclick="window.open('https://www.etoday.co.kr/news/flashnews/', 'flashnews', 'width=1470,height=970,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,top=0,left=0');">속보창</a></li>
+                        <li><a href="#">신문/PDF구독</a></li>
+                        <li><a href="#">RSS<i class="rss"></i></a></li>
+                        <li class="round"><a href="https://member.etoday.co.kr/acc_sns/login.php?URL=www.etoday.co.kr%2F"><span>로그인</span><span>회원가입</span></a></li>
+                    </ul>
+                </nav>
+
+                <div class="btn btn_menu"><div class="mbar"></div></div>
+            </div>
+        </header>
+        <main class="contents">
+            <section class="showcase">
+                <div class="viewbox">
+                    <div class="srch_box">
+                        <div class="srch_wrap">
+                            <div class="srch_ipt_wrap">
+                            <input type="text" class="input" placeholder="기업명을 입력해 주세요">
+                            <!-- <button type="button" class="btn_srch">검색</button> -->
+                            </div>
+                            <div class="atcmp_container">
+                                <ul class="atcmp_list">
+                                    <li><a href="#"><strong>기업</strong> 리스트</a></li>
+                                    <li><a href="#">기업 리스트</a></li>
+                                    <li><a href="#">기업 리스트</a></li>
+                                </ul>
+                                <div class="atcmp_foot">
+                                    <a href="#" class="btn_close">닫기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_show_swiper swiper_container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="show_inner">
+                                    <h2>
+                                        <div class="sort gr">유<div class="tooltip">유가증권시장</div></div>
+                                        <div class="name">엘지씨엔에스</div>
+                                        <a href="detailpage.html" class="link link_show"></a>
+                                        <a href="#" class="link"></a>
+                                    </h2>
+                                    <div class="map leftwrap">
+                                        <div class="map_header">
+                                            주주 구성
+                                            <div class="date">2024.12.28 기준</div>
+                                        </div>
+                                        <div class="map_wrap">
+                                            <div class="cell lg" onclick="addSwiper();">
+                                                <div class="circle">
+                                                    <div class="sort pp">코<div class="tooltip">코스닥시장</div></div>
+                                                    <div class="name">
+                                                        <p>엘지</p>
+                                                        <a href="#" class="link link_show"></a>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">49.95%</div>
+                                            </div>
+                                            <div class="cell lg">
+                                                <div class="circle">
+                                                    <div class="sort pp">코<div class="tooltip">코스닥시장</div></div>
+                                                    <div class="name">
+                                                        <p>크리스탈 코리아 유한회사</p>
+                                                        <a href="#" class="link link_show"></a>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">35.00%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>구광모</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>개인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>개인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>개인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="map rightwrap">
+                                        <div class="map_header">
+                                            투자회사 분석
+                                            <div class="date">2024.12.28 기준</div>
+                                        </div>
+                                        <div class="map_wrap">
+                                            <div class="cell lg">
+                                                <div class="circle">
+                                                    <div class="sort yl">기<div class="tooltip">기타</div></div>
+                                                    <div class="name">
+                                                        <p>㈜비즈테크온</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">35.00%</div>
+                                            </div>
+                                            <div class="cell md">
+                                                <div class="circle">
+                                                    <div class="sort bl">넥<div class="tooltip">코넥스시장</div></div>
+                                                    <div class="name">
+                                                        <p>㈜라이트브레인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">20.00%<br>5407,백만원</div>
+                                            </div>
+                                            <div class="cell md">
+                                                <div class="circle">
+                                                    <div class="sort yl">기<div class="tooltip">기타</div></div>
+                                                    <div class="name">
+                                                        <p>㈜지티이노비전</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">20.00%<br>5407,백만원</div>
+                                            </div>
+                                            
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>구광모</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>개인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>개인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="show_inner">
+                                    <h2>
+                                        <div class="sort gr">유<div class="tooltip">유가증권시장</div></div>
+                                        <div class="name">크리스탈코리아</div>
+                                        <a href="detailpage.html" class="link link_show"></a>
+                                        <a href="#" class="link"></a>
+                                    </h2>
+                                    <div class="map leftwrap">
+                                        <div class="map_header">
+                                            주주 구성
+                                            <div class="date">2024.12.28 기준</div>
+                                        </div>
+                                        <div class="map_wrap">
+                                            <div class="cell lg" onclick="showSwiper.slideTo(1);">
+                                                <div class="circle">
+                                                    <div class="sort pp">코<div class="tooltip">코스닥시장</div></div>
+                                                    <div class="name">
+                                                        <p>엘지씨엔에스</p>
+                                                        <a href="#" class="link link_show"></a>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">49.95%</div>
+                                            </div>
+                                            <div class="cell lg">
+                                                <div class="circle">
+                                                    <div class="sort pp">코<div class="tooltip">코스닥시장</div></div>
+                                                    <div class="name">
+                                                        <p>크리스탈 코리아 유한회사</p>
+                                                        <a href="#" class="link link_show"></a>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">35.00%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>구광모</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>개인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>개인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>개인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="map rightwrap">
+                                        <div class="map_header">
+                                            투자회사 분석
+                                            <div class="date">2024.12.28 기준</div>
+                                        </div>
+                                        <div class="map_wrap">
+                                            <div class="cell lg">
+                                                <div class="circle">
+                                                    <div class="sort yl">기<div class="tooltip">기타</div></div>
+                                                    <div class="name">
+                                                        <p>㈜비즈테크온</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">35.00%</div>
+                                            </div>
+                                            <div class="cell md">
+                                                <div class="circle">
+                                                    <div class="sort bl">넥<div class="tooltip">코넥스시장</div></div>
+                                                    <div class="name">
+                                                        <p>㈜라이트브레인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">20.00%<br>5407,백만원</div>
+                                            </div>
+                                            <div class="cell md">
+                                                <div class="circle">
+                                                    <div class="sort yl">기<div class="tooltip">기타</div></div>
+                                                    <div class="name">
+                                                        <p>㈜지티이노비전</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">20.00%<br>5407,백만원</div>
+                                            </div>
+                                            
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>구광모</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>개인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                            <div class="cell sm">
+                                                <div class="circle">
+                                                    <div class="name">
+                                                        <p>개인</p>
+                                                        <a href="#" class="link"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="val">1.12%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <script>
+
+                        var showSwiper  =  new Swiper('.main_show_swiper', {
+                            effect: 'fade',
+                            fadeEffect: {
+                                crossFade: true
+                            },
+                            loop:true,
+                            navigation: {
+                                nextEl: '.main_show_swiper .swiper-button-next',
+                                prevEl: '.main_show_swiper .swiper-button-prev'
+                            },
+                            pagination: {
+                                el: ".main_show_swiper .swiper-pagination",
+                            },
+                            breakpoints: {
+                                600: {
+                                }
+                            },
+                        })
+
+                        function addSwiper(){
+                            //슬라이드 추가
+                            var slideHtml = '<div class="swiper-slide"><div class="show_inner">';
+                                slideHtml += '<h2>';
+                                slideHtml += '    <div class="sort gr">유<div class="tooltip">유가증권시장</div></div>';
+                                slideHtml += '    <div class="name">엘지</div>';
+                                slideHtml += '    <a href="detailpage.html" class="link link_show"></a>';
+                                slideHtml += '    <a href="#" class="link"></a>';
+                                slideHtml += '</h2>';
+                                slideHtml += '<div class="map leftwrap">';
+                                slideHtml += '    <div class="map_header">';
+                                slideHtml += '        주주 구성';
+                                slideHtml += '        <div class="date">2024.12.28 기준</div>';
+                                slideHtml += '    </div>';
+                                slideHtml += '    <div class="map_wrap">';
+                                slideHtml += '        <div class="cell lg" onclick="showSwiper.slideTo(1);">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="sort pp">코<div class="tooltip">코스닥시장</div></div>';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>엘지씨엔에스</p>';
+                                slideHtml += '                    <a href="#" class="link link_show"></a>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">49.95%</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '        <div class="cell lg">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="sort pp">코<div class="tooltip">코스닥시장</div></div>';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>크리스탈 코리아 유한회사</p>';
+                                slideHtml += '                    <a href="#" class="link link_show"></a>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">35.00%</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '        <div class="cell sm">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>구광모</p>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">1.12%</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '        <div class="cell sm">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>개인</p>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">1.12%</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '        <div class="cell sm">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>개인</p>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">1.12%</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '        <div class="cell sm">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>개인</p>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">1.12%</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '    </div>';
+                                slideHtml += '</div>';
+                                slideHtml += '<div class="map rightwrap">';
+                                slideHtml += '    <div class="map_header">';
+                                slideHtml += '        투자회사 분석';
+                                slideHtml += '        <div class="date">2024.12.28 기준</div>';
+                                slideHtml += '    </div>';
+                                slideHtml += '    <div class="map_wrap">';
+                                slideHtml += '        <div class="cell lg">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="sort yl">기<div class="tooltip">기타</div></div>';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>㈜비즈테크온</p>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">35.00%</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '        <div class="cell md">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="sort bl">넥<div class="tooltip">코넥스시장</div></div>';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>㈜라이트브레인</p>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">20.00%<br>5407,백만원</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '        <div class="cell md">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="sort yl">기<div class="tooltip">기타</div></div>';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>㈜지티이노비전</p>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">20.00%<br>5407,백만원</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '        ';
+                                slideHtml += '        <div class="cell sm">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>구광모</p>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">1.12%</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '        <div class="cell sm">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>개인</p>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">1.12%</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '        <div class="cell sm">';
+                                slideHtml += '            <div class="circle">';
+                                slideHtml += '                <div class="name">';
+                                slideHtml += '                    <p>개인</p>';
+                                slideHtml += '                    <a href="#" class="link"></a>';
+                                slideHtml += '                </div>';
+                                slideHtml += '            </div>';
+                                slideHtml += '            <div class="val">1.12%</div>';
+                                slideHtml += '        </div>';
+                                slideHtml += '    </div>';
+                                slideHtml += '</div>';
+                                slideHtml += '</div></div>';
+
+                                showSwiper.appendSlide(slideHtml);
+                                const lastIndex = showSwiper.slides.length - 3;
+
+                                // 추가한 슬라이드로 이동
+                                showSwiper.slideToLoop(lastIndex, 0);  // 0은 transition 시간(즉시 이동)
+                        }
+                        
+
+                    </script>
+
+                    <div class="bot_btn_wrap">
+                        <a href="#" class="btn btn_rounded">지배 구조 전체보기</a>
+                        <a href="#" class="btn btn_rounded" onclick="modal.open('otrCprInvstmnt');return false;">타법인 출자 현황 보기</a>
+                    </div>
+                    <div class="scrollani" onclick=" window.scrollBy({top: window.innerHeight,behavior: 'smooth'});"><div class="arrow"></div><div class="arrow"></div></div>
+                </div>
+            </section>
+            <section class="main_dashboard" id="mainDashboard">
+                <div class="container">
+                    <div class="mdashSwiper">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h3>삼성증권 대시보드</h3>
+                                    <div class="card">
+                                        <div class="card_header">
+                                            <div class="tit">대표이사</div>
+                                            <div class="name">박종문</div>
+                                            <a href="#" class="btn btn_txt">상세보기</a>
+                                        </div>
+                                        <div class="card_body">
+                                            <div class="inner">
+                                                <h5 class="card_title">매출 및 영업이익<span class="sm">단위:억원</span></h5>
+                                                <div class="finance_item_wrap">
+                                                    <div class="inner_wrap">
+                                                        <div class="finace_item box">
+                                                            <div class="y">2024</div>
+                                                            <dl class="val_wrap">
+                                                                <dt>매출</dt>
+                                                                <dd data-val="59826">0</dd>
+                                                                <dt>영업이익</dt>
+                                                                <dd data-val="5129">0</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="finace_item box">
+                                                            <div class="y">2023</div>
+                                                            <dl class="val_wrap">
+                                                                <dt>매출</dt>
+                                                                <dd data-val="59826">0</dd>
+                                                                <dt>영업이익</dt>
+                                                                <dd data-val="5129">0</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="finace_item box">
+                                                            <div class="y">2022</div>
+                                                            <dl class="val_wrap">
+                                                                <dt>매출</dt>
+                                                                <dd data-val="59826">0</dd>
+                                                                <dt>영업이익</dt>
+                                                                <dd data-val="5129">0</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="inner">
+                                                <h5 class="card_title">대주주</h5>
+                                                <ul class="shareholder_list box">
+                                                    <li>
+                                                        <div class="bar_wrap">
+                                                            <div class="bar" data-val="44.95%"></div>
+                                                        </div>
+                                                        <div class="per">44.95%</div>
+                                                        <div class="sh_name">엘지</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bar_wrap">
+                                                            <div class="bar" data-val="35.00%"></div>
+                                                        </div>
+                                                        <div class="per">35.00%</div>
+                                                        <div class="sh_name">크리스탈코리아 유한회사</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bar_wrap">
+                                                            <div class="bar" data-val="32.54%"></div>
+                                                        </div>
+                                                        <div class="per">32.54%</div>
+                                                        <div class="sh_name">엘지</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bar_wrap">
+                                                            <div class="bar" data-val="2.38%"></div>
+                                                        </div>
+                                                        <div class="per">2.38%</div>
+                                                        <div class="sh_name">구광모 외</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3>삼성증권 대시보드</h3>
+                                    <div class="card">
+                                        <div class="card_header">
+                                            <div class="tit">대표이사</div>
+                                            <div class="name">박종문</div>
+                                            <a href="#" class="btn btn_txt">상세보기</a>
+                                        </div>
+                                        <div class="card_body">
+                                            <div class="inner">
+                                                <h5 class="card_title">대출 및 영업이익<span class="sm">단위:억원</span></h5>
+                                                <div class="finance_item_wrap">
+                                                    <div class="inner_wrap">
+                                                        <div class="finace_item box">
+                                                            <div class="y">2024</div>
+                                                            <dl class="val_wrap">
+                                                                <dt>매출</dt>
+                                                                <dd data-val="59826">0</dd>
+                                                                <dt>영업이익</dt>
+                                                                <dd data-val="5129">0</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="finace_item box">
+                                                            <div class="y">2023</div>
+                                                            <dl class="val_wrap">
+                                                                <dt>매출</dt>
+                                                                <dd data-val="59826">0</dd>
+                                                                <dt>영업이익</dt>
+                                                                <dd data-val="5129">0</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="finace_item box">
+                                                            <div class="y">2022</div>
+                                                            <dl class="val_wrap">
+                                                                <dt>매출</dt>
+                                                                <dd data-val="59826">0</dd>
+                                                                <dt>영업이익</dt>
+                                                                <dd data-val="5129">0</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="inner">
+                                                <h5 class="card_title">대주주</h5>
+                                                <ul class="shareholder_list box">
+                                                    <li>
+                                                        <div class="bar_wrap">
+                                                            <div class="bar" data-val="44.95%"></div>
+                                                        </div>
+                                                        <div class="per">44.95%</div>
+                                                        <div class="sh_name">엘지</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bar_wrap">
+                                                            <div class="bar" data-val="35.00%"></div>
+                                                        </div>
+                                                        <div class="per">35.00%</div>
+                                                        <div class="sh_name">크리스탈코리아 유한회사</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bar_wrap">
+                                                            <div class="bar" data-val="32.54%"></div>
+                                                        </div>
+                                                        <div class="per">32.54%</div>
+                                                        <div class="sh_name">엘지</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bar_wrap">
+                                                            <div class="bar" data-val="2.38%"></div>
+                                                        </div>
+                                                        <div class="per">2.38%</div>
+                                                        <div class="sh_name">구광모 외</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+
+                        <script>
+                            var mdashSwiper =  new Swiper('.mdashSwiper .swiper-container', {
+                                spaceBetween:30,
+                                navigation: {
+                                    nextEl: '.mdashSwiper .swiper-button-next',
+                                    prevEl: '.mdashSwiper .swiper-button-prev'
+                                },
+                                allowTouchMove:true,
+                                breakpoints: {
+                                    600: {
+                                        allowTouchMove:false,
+                                    }
+                                },
+                                on: {
+                                    slideChangeTransitionStart: function () {
+                                        dataReset();
+                                    },
+                                    slideChangeTransitionEnd: function () {
+                                        dataAni();
+                                    },
+                                },
+                            })
+
+                            function dataReset(){
+                                const bars = document.querySelectorAll('.main_dashboard .bar');
+                                const nums = document.querySelectorAll('.main_dashboard .val_wrap dd');
+                                bars.forEach(bar => bar.style.width = '0');
+                                nums.forEach(num => num.text = '0');
+                            }
+                            function dataAni(){
+                                const bars = document.querySelectorAll('.main_dashboard .bar');
+                                const nums = document.querySelectorAll('.main_dashboard .val_wrap dd');
+                                const counter = { val: 0 };  // 각 num마다 별도 counter 생성
+
+                                bars.forEach((bar) => {
+                                    const targetWidth = bar.dataset.val;
+                                    gsap.to(bar, {
+                                        width: targetWidth,
+                                        duration: 1,
+                                        ease: "power2.out",
+                                        delay:.1
+                                    }); 
+                                });
+                                nums.forEach((num) =>{
+                                    const endValue = parseInt(num.dataset.val, 10);
+                                    gsap.to(counter, {
+                                        val: endValue,
+                                        duration: 1,
+                                        ease: "power2.out",
+                                        onUpdate: () => {
+                                            num.textContent = Math.floor(counter.val).toLocaleString();  // 쉼표 추가
+                                        }
+                                    });
+
+                                });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </section>
+            <section class="main_notice_today">
+                <div class="container">
+                    <h3>오늘의 공시</h3>
+                    <div class="table_srch_box">
+                        <div class="ipt_group">
+                            <span class="ipt_txt">회사명</span>
+                            <input type="text" class="input md">
+                        </div>
+                        <div class="ipt_group">
+                            <span class="ipt_txt">기간</span>
+                            <div class="datepicker_wrap">
+                                <input type="text" class="input datepicker datepicker1">
+                                <div class="sel_layPop">
+                                    <div class="datepicker_wrap">
+                                        <div id="date-range"></div>
+                                        <button class="btn_close bg" onclick="$(this).closest('.sel_layPop').removeClass('active')"><span class="blind">닫기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="unit">~</div>
+                            <div class="datepicker_wrap">
+                                <input type="text" class="input datepicker datepicker2">
+                                <div class="sel_layPop">
+                                    <div class="datepicker_wrap">
+                                        <div id="date-range2"></div>
+                                        <button class="btn_close bg" onclick="$(this).closest('.sel_layPop').removeClass('active')"><span class="blind">닫기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <button type="button" class="btn btn_solid">검색</button>
+                        <Script>
+                            $(function(){
+                                var nowDate = new Date();
+                                var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
+                                $(".datepicker1").dateRangePicker({
+                                    inline: true,
+                                    opens: 'left',
+                                    singleMonth: true,
+                                    singleDate: true,   
+                                    // startDate: today,
+                                    showDropdowns: true,
+                                    format: 'YYYY-MM-DD',
+                                    language: 'en',
+                                    container: '#date-range',
+                                    alwaysOpen:true,
+                                    showTopbar: false,
+                                    stickyMonths: true,
+                                    customArrowPrevSymbol:'<img src="/images/common/datepicker_prev.png" alt="">',
+                                    customArrowNextSymbol:'<img src="/images/common/datepicker_next.png" alt="">',
+                                    setValue: function(s){
+                                        $('.datepicker1').val(s);
+                                    },
+                                }).bind('datepicker-first-date-selected', function(event, obj) {
+                                    // 초기화
+                                     $(".main_notice_today .sel_layPop").removeClass('active')
+                                })
+                                $(".datepicker2").dateRangePicker({
+                                    inline: true,
+                                    opens: 'left',
+                                    singleMonth: true,
+                                    singleDate: true,   
+                                    // startDate: today,
+                                    showDropdowns: true,
+                                    format: 'YYYY-MM-DD',
+                                    language: 'en',
+                                    container: '#date-range2',
+                                    alwaysOpen:true,
+                                    showTopbar: false,
+                                    stickyMonths: true,
+                                    customArrowPrevSymbol:'<img src="/images/common/datepicker_prev.png" alt="">',
+                                    customArrowNextSymbol:'<img src="/images/common/datepicker_next.png" alt="">',
+                                    setValue: function(s){
+                                        $('.datepicker2').val(s);
+                                    },
+                                }).bind('datepicker-first-date-selected', function(event, obj) {
+                                    // 초기화
+                                     $(".main_notice_today .sel_layPop").removeClass('active')
+                                })
+                                $(".table_srch_box").on('click', '.datepicker1', function(){
+                                    $(this).next('.sel_layPop').toggleClass('active');
+                                })
+                                $(".table_srch_box").on('click', '.datepicker2', function(){
+                                    $(this).next('.sel_layPop').toggleClass('active');
+                                })
+                            })
+                        </Script>
+                    </div>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">보고서명</th>
+                                <th scope="col">AI요약</th>
+                                <th scope="col">주식시장</th>
+                                <th scope="col">제출인</th>
+                                <th scope="col">접수일자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="left">유상증자최종발행가액확정</td>
+                                <td><button type="button" class="btn btn_down">다운로드</button></td>
+                                <td>코스닥시장</td>
+                                <td>LS마린솔루션</td>
+                                <td>2025.07.31 09:44</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="left">유상증자최종발행가액확정</td>
+                                <td><button type="button" class="btn btn_down">다운로드</button></td>
+                                <td>코스닥시장</td>
+                                <td>LS마린솔루션</td>
+                                <td>2025.07.31 09:44</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="left">유상증자최종발행가액확정</td>
+                                <td><button type="button" class="btn btn_down">다운로드</button></td>
+                                <td>코스닥시장</td>
+                                <td>LS마린솔루션</td>
+                                <td>2025.07.31 09:44</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="left">유상증자최종발행가액확정</td>
+                                <td><button type="button" class="btn btn_down">다운로드</button></td>
+                                <td>코스닥시장</td>
+                                <td>LS마린솔루션</td>
+                                <td>2025.07.31 09:44</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="left">유상증자최종발행가액확정</td>
+                                <td><button type="button" class="btn btn_down">다운로드</button></td>
+                                <td>코스닥시장</td>
+                                <td>LS마린솔루션</td>
+                                <td>2025.07.31 09:44</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="paging">
+                        <a href="#" class="first">처음</a>
+                        <a href="#" class="prev">이전</a>
+                        <a href="#" class="on">1</a>
+                        <a href="#" class="">2</a>
+                        <a href="#" class="">3</a>
+                        <a href="#" class="">4</a>
+                        <a href="#" class="">5</a>
+                        <a href="#" class="next">다음</a>
+                        <a href="#" class="last">마지막</a>
+                    </div>
+                </div>
+            </section>
+            <section class="main_ranking">
+                <div class="container">
+                    <h3>기업 랭킹분석</h3>
+                    <div class="top_rank_scroll">
+                        <div class="top_rank_wrap">
+                            <div class="top_rank" onclick="modal.open('rank');modalGraph();">
+                                <div class="rank_title">2024년 12월 현재 정규직 근로자가 많은 상위 10대 기업</div>
+                                <div class="list_header">
+                                    <div class="sm">단위:명</div>
+                                </div>
+                                <ul class="rank_list">
+                                    <li>
+                                        <div class="num">1</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="90%"></div></div></div>
+                                        <div class="data">129,231</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">2</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="70%"></div></div></div>
+                                        <div class="data">65,231</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">3</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="65%"></div></div></div>
+                                        <div class="data">35,231</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">4</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="60%"></div></div></div>
+                                        <div class="data">33,231</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">5</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="50%"></div></div></div>
+                                        <div class="data">32,231</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">6</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="45%"></div></div></div>
+                                        <div class="data">26,231</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">7</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="40%"></div></div></div>
+                                        <div class="data">25,231</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">8</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="30%"></div></div></div>
+                                        <div class="data">23,231</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">9</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="20%"></div></div></div>
+                                        <div class="data">16,231</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">10</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="10%"></div></div></div>
+                                        <div class="data">15,231</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top_rank">
+                                <div class="rank_title">2024년 12월 현재 유가증권 시장법인중 대주주 및 <br>특수관계인 지분율이 높은 10대 기업</div>
+                                <div class="list_header">
+                                    <div class="sm">단위:%</div>
+                                </div>
+                                <ul class="rank_list">
+                                    <li>
+                                        <div class="num">1</div>
+                                        <div class="name">서울보증보험</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="93.85%"></div></div></div>
+                                        <div class="data">93.85</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">2</div>
+                                        <div class="name">서울보증보험</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="91.71%"></div></div></div>
+                                        <div class="data">91.71</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">3</div>
+                                        <div class="name">서울보증보험</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="87.83%"></div></div></div>
+                                        <div class="data">87.83</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">4</div>
+                                        <div class="name">서울보증보험</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="86.60%"></div></div></div>
+                                        <div class="data">86.60</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">5</div>
+                                        <div class="name">서울보증보험</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="75.74%"></div></div></div>
+                                        <div class="data">75.74</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">6</div>
+                                        <div class="name">삼성전자</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="65.11%"></div></div></div>
+                                        <div class="data">65.11</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">7</div>
+                                        <div class="name">서울보증보험</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="54.74%"></div></div></div>
+                                        <div class="data">54.74</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">8</div>
+                                        <div class="name">서울보증보험</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="44.69%"></div></div></div>
+                                        <div class="data">44.69</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">9</div>
+                                        <div class="name">서울보증보험</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="33.38%"></div></div></div>
+                                        <div class="data">33.38</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">10</div>
+                                        <div class="name">서울보증보험</div>
+                                        <div class="bar_wrap"><div class="bar_inner"><div class="bar" data-val="21.84%"></div></div></div>
+                                        <div class="data">21.84</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <script>
+                            function rankDataAni(){
+                                const bars = document.querySelectorAll('.main_ranking .bar');
+                                bars.forEach((bar) => {
+                                    const targetWidth = bar.dataset.val;
+                                    gsap.to(bar, {
+                                        width: targetWidth,
+                                        duration: 1,
+                                        ease: "power2.out",
+                                        delay:.1
+                                    }); 
+                                });
+                            }
+                        </script>
+                    </div>
+                    <div class="bot_rank_wrap rankswiper">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="date">2025.06.27</div>
+                                    <div class="tit">2024년 보통주 자기주식을 많이  취득한 기업</div>
+                                    <div class="graph">
+                                        <div id="chart1" class="chart"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="date">2025.06.27</div>
+                                    <div class="tit">2024년 보통주 자기주식을 많이  취득한 기업</div>
+                                    <div class="graph">
+                                        <div id="chart2" class="chart"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="date">2025.06.27</div>
+                                    <div class="tit">2024년 보통주 자기주식을 많이  취득한 기업</div>
+                                    <div class="graph">
+                                        <div id="chart3" class="chart"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="date">2025.06.27</div>
+                                    <div class="tit">2024년 보통주 자기주식을 많이  취득한 기업</div>
+                                    <div class="graph">
+                                        <div id="chart4" class="chart"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="date">2025.06.27</div>
+                                    <div class="tit">2024년 보통주 자기주식을 많이  취득한 기업</div>
+                                    <div class="graph">
+                                        <div id="chart5" class="chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <script>
+                            var chartsArr = [];
+                            /* highcharts */
+                            const commonOptions = {
+                                chart: {
+                                    backgroundColor: 'transparent',
+                                    plotBackgroundColor: 'transparent'
+                                },
+                                xAxis: {
+                                    title: { text: null },
+                                    labels: {
+                                        style: {
+                                            color: 'rgba(255,255,255,.6)',
+                                            fontSize: '12px'
+                                        }
+                                    },
+                                    lineColor: 'rgba(255, 255, 255, 0.2)',
+                                    lineWidth: 2
+                                },
+                                yAxis: {
+                                    title: { text: null },
+                                    gridLineColor: 'rgba(255, 255, 255, 0.2)', // 그리드선 색
+                                    gridLineWidth: 1,                           // 두께
+                                    labels: {
+                                        style: {
+                                            color: 'rgba(255,255,255,.6)',
+                                            fontSize: '12px'
+                                        }
+                                    }
+                                },
+                                legend: { enabled: false }
+                            };
+                            
+                            function chartCreate(){
+                                chartsArr[0] = Highcharts.chart('chart1', Highcharts.merge(commonOptions, {
+                                    chart: {
+                                        type: 'line'
+                                    },
+                                    series: [{
+                                        name: 'Installation & Developers',
+                                        data: [43934, 48656, 65165, 81827],
+                                        marker: {
+                                            lineWidth: 2,
+                                            lineColor: '#4840d6',
+                                            fillColor: '#fff'
+                                        },
+                                        color: {
+                                            linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+                                            stops: [
+                                                [0, '#fa4fed'],
+                                                [1, '#5897ff']
+                                            ]
+                                        }
+                                    }]
+                                }));
+                                chartsArr[1] = Highcharts.chart('chart2', Highcharts.merge(commonOptions, {
+                                    colors: [
+                                        '#4caefe', '#35c3e8', '#20cfe1', '#0dd9db', '#00e4c5', '#00eeaf', '#23e274'
+                                    ],
+                                    xAxis: {
+                                        categories: ['처음', '두번', '세번', '네번', '다섯'],
+                                    },
+                                    series: [{
+                                        type: 'column',
+                                        name: 'Unemployed',
+                                        border: false,
+                                        borderRadius: 2,
+                                        colorByPoint: true,
+                                        data: [2396, 2434, 1791, 2602, 1536,],
+                                        showInLegend: false,
+                                        borderWidth: 0, 
+                                    }]
+                                }));
+                                chartsArr[2] = Highcharts.chart('chart3', Highcharts.merge(commonOptions, {
+                                    chart: {
+                                        type: 'bar'
+                                    },
+                                    xAxis: {
+                                        categories: ['삼성전자', '엘지전자', 'SK하이닉스'],
+                                    },
+                                    series: [{
+                                        name: 'Year 2024',
+                                        data: [632, 800, 1200],
+                                        borderWidth: 0, 
+                                    }]
+                                }));
+                                chartsArr[3] = Highcharts.chart('chart4', Highcharts.merge(commonOptions, {
+                                    chart: {
+                                        type: 'variablepie'
+                                    },
+                                    series: [{
+                                        minPointSize: 10,
+                                        innerSize: '30%',
+                                        zMin: 0,
+                                        name: 'countries',
+                                        data: [{
+                                            name: 'Spain',
+                                            y: 505992,
+                                            z: 95
+                                        }, {
+                                            name: 'France',
+                                            y: 551695,
+                                            z: 118
+                                        }, {
+                                            name: 'Poland',
+                                            y: 312679,
+                                            z: 131
+                                        }],
+                                        colors: [
+                                            '#4caefe',
+                                            '#3dc3e8',
+                                            '#2dd9db',
+                                            '#1feeaf',
+                                            '#0ff3a0',
+                                            '#00e887',
+                                            '#23e274'
+                                        ],
+                                        borderRadius: 0,
+                                        borderWidth: 0, 
+                                        dataLabels: {
+                                            enabled: true,
+                                            style: {
+                                                color: 'rgba(255,2555,255,.6)',   // 빨간색
+                                                textOutline: 'none'  // 스트로크 없앰
+                                            }
+                                        }
+                                    }]
+                                }));
+                                chartsArr[4] = Highcharts.chart('chart5', Highcharts.merge(commonOptions, {
+                                    chart: {
+                                        type: 'area'
+                                    },
+                                    
+                                    plotOptions: {
+                                        area: {
+                                            pointStart: 1985,
+                                            marker: {
+                                                enabled: false,
+                                                symbol: 'circle',
+                                                radius: 2,
+                                                states: {
+                                                    hover: {
+                                                        enabled: true
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    series: [{
+                                        name: 'USA',
+                                        data: [
+                                            null, null, null, null, null, 2, 9, 13, 50, 170, 299, 438, 841,
+                                            1169, 1703, 2422, 3692, 5543, 7345, 12298, 18638, 22229, 25540,
+                                            28133, 29463, 31139, 31175, 31255, 29561, 27552, 26008, 25830,
+                                            26516, 27835, 28537, 27519, 25914, 25542, 24418, 24138, 24104,
+                                        ]
+                                    }, {
+                                        name: 'USSR/Russia',
+                                        data: [
+                                            null, null, null, null, null, null, null, null, null,
+                                            1, 5, 25, 50, 120, 150, 200, 426, 660, 863, 1048, 1627, 2492,
+                                            3346, 4259, 5242, 6144, 7091, 8400, 9490, 10671, 11736, 13279,
+                                            14600, 15878, 17286, 19235, 22165, 24281, 26169, 28258, 30665,
+                                        ]
+                                    }]
+                                }));
+                            }
+
+
+                            var rankSwiper =  new Swiper('.rankswiper .swiper-container', {
+                                slidesPerView:4,
+                                spaceBetween:0,
+                                navigation: {
+                                    nextEl: '.rankswiper .swiper-button-next',
+                                    prevEl: '.rankswiper .swiper-button-prev'
+                                },
+                                breakpoints: {
+                                    600: {
+                                        slidesPerView:1,
+                                    },
+                                    1024:{
+                                        slidesPerView:2,
+                                    }
+                                },
+                                on: {
+                                    slideChangeTransitionEnd: function () {
+                                        chartsArr.forEach(chart => {
+                                            chart.destroy();
+                                        });
+                                        chartCreate()
+                                    }
+                                },
+                            })
+                        </script>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="f_m_group">
+                    <ul>
+                        <li><a href="https://company.etoday.co.kr/" class="click-trc" data-name="main_ft_company" target="_blank">회사소개</a></li>
+                        <li><a href="javascript:;" onclick="footer_popup('tab01')" class="click-trc" data-name="main_ft_policy_1">이용약관</a></li>
+                        <li class="f_point"><a href="javascript:;" onclick="footer_popup('tab02')" class="click-trc" data-name="main_ft_policy_2">개인정보처리방침</a></li>
+                        <li><a href="javascript:;" onclick="footer_popup('tab03')" class="click-trc" data-name="main_ft_policy_3">청소년보호정책</a></li>
+                        <li><a href="javascript:;" onclick="footer_popup('tab04')" class="click-trc" data-name="main_ft_policy_4">고충처리</a></li>
+                        <li><a href="https://company.etoday.co.kr/company_info/location" class="click-trc" data-name="main_ft_location" target="_blank">이용문의</a></li>
+                        <li><a href="https://member.etoday.co.kr/subs/" class="click-trc" data-name="main_ft_subscribe" target="_blank">신문/PDF 구독</a></li>
+                        <li><a href="https://www.etoday.co.kr/rss/" class="click-trc" data-name="main_ft_rss">RSS<span class="rss_ico img_element"></span></a></li>
+                        <li><a href="https://www.etoday.co.kr/sitemap/" class="click-trc" data-name="main_ft_sitemap">사이트맵</a></li>
+                    </ul>
+                    <div class="f_share_icons">
+                        <a href="https://www.youtube.com/user/etodaycokr" class="sns_youtube" target="_blank"></a>
+                        <a href="https://tv.naver.com/etoday" class="sns_navertv" target="_blank"></a>
+                        <a href="https://tv.kakao.com/channel/2882570/video" class="sns_kakaotv" target="_blank"></a>
+                        <a href="https://www.facebook.com/etoday/" class="sns_facebook" target="_blank"></a>
+                        <a href="https://blog.naver.com/etoday12" class="sns_naverblog" target="_blank"></a>
+                        <a href="https://twitter.com/etodaynews" class="sns_x"target="_blank"></a>
+                        <a href="https://www.instagram.com/etoday_newsplus/" class="sns_instagram" target="_blank"></a>                                                   
+                    </div>
+                </div>
+                <div class="foot_info">
+                    <p><span><strong>이투데이 (제호 : 이투데이)</strong> 서울시 강남구 강남대로 556 이투데이빌딩</span><span>TEL 02-799-2600</span></p>
+                    <p><span>등록번호 : 서울아00197</span><span>등록일자 : 2006.04.27</span><span>발행일자 : 2006.04.27</span><span>발행인 : 김상우</span><span>편집인 : 이종재</span><span>청소년보호책임자 : 이초희</span></p>
+                    <p class="copyright">Copyright 2025. 이투데이. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="loader_wrap"><div class="loader"></div></div>
+
+        <div class="modal modal_otrCprInvstmnt">
+            <div class="modal_wrap">
+                <div class="modal_inner">
+                    <div class="modal_header">
+                        <h5>엘지씨엔에스 타법인 출자 현황</h5>
+                        <a href="#" class="btn_modal_close" onclick="modal.close('otrCprInvstmnt');return false;">닫기</a>
+                    </div>
+                    <div class="modal_contents">
+                        <div class="table_wrap">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>법인명</th>
+                                        <th>최초취득일자</th>
+                                        <th>출자목적</th>
+                                        <th>기말잔액(수량)</th>
+                                        <th>기말잔액(지분율)</th>
+                                        <th>기말잔액(장부가액)</th>
+                                        <th>최근사업연도 재무현황<br>(총자산)</th>
+                                        <th>최근사업연도 재무현황<br>(당기순이익)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>㈜비즈테크아이</td>
+                                        <td>2007.08.23</td>
+                                        <td>경영참여</td>
+                                        <td>10,375,721</td>
+                                        <td>96.09</td>
+                                        <td>10,015,000,000</td>
+                                        <td>90,093,000,000</td>
+                                        <td>8,781,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜행복마루</td>
+                                        <td>2016.09.07</td>
+                                        <td>경영참여</td>
+                                        <td>140,000</td>
+                                        <td>100.00</td>
+                                        <td>700,000,000</td>
+                                        <td>3,263,000,000</td>
+                                        <td>413,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜오픈소스컨설팅 (*5)</td>
+                                        <td>2019.07.01</td>
+                                        <td>경영참여</td>
+                                        <td>244,292</td>
+                                        <td>73.06</td>
+                                        <td>7,922,000,000</td>
+                                        <td>13,690,000,000</td>
+                                        <td>-619,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜라이트브레인 (*5)</td>
+                                        <td>2021.12.10</td>
+                                        <td>경영참여</td>
+                                        <td>204,300</td>
+                                        <td>61.91</td>
+                                        <td>5,407,000,000</td>
+                                        <td>10,889,000,000</td>
+                                        <td>36,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜비즈테크온</td>
+                                        <td>2022.07.01</td>
+                                        <td>경영참여</td>
+                                        <td>2,158,849</td>
+                                        <td>96.09</td>
+                                        <td>2,084,000,000</td>
+                                        <td>16,320,000,000</td>
+                                        <td>1,903,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>(주)지티이노비젼 (*2)</td>
+                                        <td>2024.03.07</td>
+                                        <td>경영참여</td>
+                                        <td>45,800</td>
+                                        <td>55.05</td>
+                                        <td>5,953,000,000</td>
+                                        <td>11,977,000,000</td>
+                                        <td>92,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LG CNS China Inc.</td>
+                                        <td>2001.04.01</td>
+                                        <td>경영참여</td>
+                                        <td>-</td>
+                                        <td>100.00</td>
+                                        <td>23,232,000,000</td>
+                                        <td>93,425,000,000</td>
+                                        <td>14,792,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LG CNS America, Inc.</td>
+                                        <td>2003.07.01</td>
+                                        <td>경영참여</td>
+                                        <td>100</td>
+                                        <td>100.00</td>
+                                        <td>2,883,000,000</td>
+                                        <td>270,702,000,000</td>
+                                        <td>34,396,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LG CNS Europe B.V.</td>
+                                        <td>2003.03.01</td>
+                                        <td>경영참여</td>
+                                        <td>5,000</td>
+                                        <td>100.00</td>
+                                        <td>3,657,000,000</td>
+                                        <td>55,572,000,000</td>
+                                        <td>3,733,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PT. LG CNS Indonesia</td>
+                                        <td>2005.12.01</td>
+                                        <td>경영참여</td>
+                                        <td>20,000</td>
+                                        <td>100.00</td>
+                                        <td>-</td>
+                                        <td>22,933,000,000</td>
+                                        <td>-350,000,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal_rank">
+            <div class="modal_wrap">
+                <div class="modal_inner">
+                    <div class="modal_header">
+                        <h5>기업 랭킹 분석</h5>
+                        <a href="#" class="btn_modal_close" onclick="modal.close('rank');return false;">닫기</a>
+                    </div>
+                    <div class="modal_contents">
+                        <div class="rank_header">
+                            <div class="rank_title">2024년 당기순이익 Top 10기업은?</div>
+                            <div class="sm">단위:억원</div>
+                        </div>
+                        <div class="chart">
+                            <div id="inRank"></div>
+                            
+                        </div>
+                        <div class="table_wrap">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>순위</th>
+                                        <th>기업명</th>
+                                        <th>당기순이익(억원)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="left">삼성전자</td>
+                                        <td>12,923</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="left">sk하이닉스</td>
+                                        <td>10923</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="left">현대자동차</td>
+                                        <td>8779</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="left">기아</td>
+                                        <td>7223</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="left">삼성생명</td>
+                                        <td>6191</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td class="left">한국전력공사</td>
+                                        <td>5174</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td class="left">한화생명</td>
+                                        <td>4132</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td class="left">미래에셋증권</td>
+                                        <td>3089</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td class="left">NH투자증권</td>
+                                        <td>2067</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="left">삼성증권</td>
+                                        <td>1911</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function modalGraph(){
+                Highcharts.chart('inRank', {
+                    chart: {
+                        type: 'column'
+                    },
+                    xAxis: {
+                        type: 'category',
+                    },
+                    yAxis: {
+                        min: 0,
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    tooltip: {
+                        pointFormat: '{point.y:.1f}'
+                    },
+                    series: [{
+                        pointWidth: 20 ,
+                        color: {
+                            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, // 위 → 아래
+                            stops: [
+                                [0, '#1673DA'],   // 시작 색
+                                [1, '#72ADEE']    // 끝 색
+                            ]
+                        },
+                        groupPadding: 0,
+                        data: [
+                            ['삼성전자', 12923],
+                            ['sk하이닉스', 10923],
+                            ['현대자동차', 8779],
+                            ['기아', 7223],
+                            ['삼성생명', 6191],
+                            ['한국전력공사', 5174],
+                            ['한화생명', 4132],
+                            ['미래에셋증권', 3089],
+                            ['NH투자증권', 2067],
+                            ['삼성증권', 1911],
+                        ],
+                    }]
+                });
+            }
+        </script>
+    </div>
+    
+    <script src="/assets/js/page.js"></script>
+</body>
+</html>

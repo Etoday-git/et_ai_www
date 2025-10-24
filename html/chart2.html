@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/base.css" type="text/css">
+    <script type="text/javascript" src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/plugins/gsap/gsap.min.js" type="text/javascript"></script>
+    <!-- daterange picker -->
+	<link rel="stylesheet" href="/assets/plugins/daterange/daterangepicker.min.css">
+    <script src="/assets/plugins/daterange/moment.js"></script>
+	<script src="/assets/plugins/daterange/jquery.daterangepicker.js"></script>
+    <!-- swiper slider -->
+    <link rel="stylesheet" type="text/css" href="/assets/plugins/swiper/swiper.min.css">
+    <script type="text/javascript" src="/assets/plugins/swiper/swiper.min.js"></script>
+    <!-- Highcharts -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/page.css" type="text/css">
+</head>
+<body>
+    <div id="etoday" class="mainpage">
+        <header class="headerWrap">
+            <div class="header_contents_wrap">
+                <h1 class="logo"><a href="/">이투데이</a></h1>
+                <p class="header_desc">공시자료 기반 실시간 기업지배구조 AI분석</p>
+
+                <!-- <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="#" onclick="window.open('https://www.etoday.co.kr/news/flashnews/', 'flashnews', 'width=1470,height=970,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,top=0,left=0');">속보창</a></li>
+                        <li><a href="#">신문/PDF구독</a></li>
+                        <li><a href="#">RSS<i class="rss"></i></a></li>
+                        <li class="round"><a href="https://member.etoday.co.kr/acc_sns/login.php?URL=www.etoday.co.kr%2F"><span>로그인</span><span>회원가입</span></a></li>
+                    </ul>
+                </nav>
+
+                <div class="btn btn_menu"><div class="mbar"></div></div> -->
+            </div>
+        </header>
+        <main class="contents">
+            <section class="showcase">
+                <div class="viewbox">
+                    <div class="srch_box">
+                        <div class="srch_wrap">
+                            <div class="srch_ipt_wrap">
+                            <input type="text" class="input" placeholder="기업명을 입력해 주세요">
+                            <!-- <button type="button" class="btn_srch">검색</button> -->
+                            </div>
+                            <div class="atcmp_container">
+                                <ul class="atcmp_list">
+                                    <li><a href="#"><strong>기업</strong> 리스트</a></li>
+                                    <li><a href="#">기업 리스트</a></li>
+                                    <li><a href="#">기업 리스트</a></li>
+                                </ul>
+                                <div class="atcmp_foot">
+                                    <a href="#" class="btn_close">닫기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_show_swiper swiper_container highver">
+                        <div class="swiper-wrapper">
+                           
+                            <div class="swiper-slide">
+                                <div class="show_inner">
+                                    <h2>
+                                        <div class="sort gr">유<div class="tooltip">유가증권시장</div></div>
+                                        <div class="name">엘지</div>
+                                        <a href="detailpage.html" class="link link_show"></a>
+                                        <a href="#" class="link"></a>
+                                        <div class="date">(2024.12.28 기준)</div>
+                                    </h2>
+                                    <div class="map leftwrap">
+                                        <div class="map_header">
+                                            주주 구성
+                                            <div class="desc"><span>5%이상 대주주</span><span>최대주주 및 특수관계인</span></div>
+                                        </div>
+                                        <div class="map_wrap c1">
+                                            <div class="chart-container chart-top" data-series="6"></div>
+                                            <div class="chart-container chart-sub" data-series="7"></div>
+                                        </div>
+                                    </div>
+                                    <div class="map rightwrap">
+                                        <div class="map_header">
+                                            투자회사 분석
+                                        </div>
+                                        <div class="map_wrap">
+                                            <div class="chart-container" data-series="8"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="show_inner">
+                                    <h2>
+                                        <div class="sort gr">유<div class="tooltip">유가증권시장</div></div>
+                                        <div class="name">엘지</div>
+                                        <a href="detailpage.html" class="link link_show"></a>
+                                        <a href="#" class="link"></a>
+                                        <div class="date">(2024.12.28 기준)</div>
+                                    </h2>
+                                    <div class="map leftwrap">
+                                        <div class="map_header">
+                                            주주 구성
+                                            <div class="desc"><span>5%이상 대주주</span><span>최대주주 및 특수관계인</span></div>
+                                        </div>
+                                        <div class="map_wrap c2">
+                                            <div class="chart-container chart-top" data-series="3"></div>
+                                            <div class="chart-container chart-sub" data-series="4"></div>
+                                        </div>
+                                    </div>
+                                    <div class="map rightwrap">
+                                        <div class="map_header">
+                                            투자회사 분석
+                                        </div>
+                                        <div class="map_wrap">
+                                            <div class="chart-container" data-series="5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="show_inner">
+                                    <h2>
+                                        <div class="sort gr">유<div class="tooltip">유가증권시장</div></div>
+                                        <div class="name">엘지</div>
+                                        <a href="detailpage.html" class="link link_show"></a>
+                                        <a href="#" class="link"></a>
+                                        <div class="date">(2024.12.28 기준)</div>
+                                    </h2>
+                                    <div class="map leftwrap">
+                                        <div class="map_header">
+                                            주주 구성
+                                            <div class="desc"><span>5%이상 대주주</span><span>최대주주 및 특수관계인</span></div>
+                                        </div>
+                                        <div class="map_wrap c3">
+                                            <div class="chart-container chart-top" data-series="0"></div>
+                                            <div class="chart-container chart-sub" data-series="1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="map rightwrap">
+                                        <div class="map_header">
+                                            투자회사 분석
+                                        </div>
+                                        <div class="map_wrap">
+                                            <div class="chart-container" data-series="2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="show_inner">
+                                    <h2>
+                                        <div class="sort gr">유<div class="tooltip">유가증권시장</div></div>
+                                        <div class="name">엘지</div>
+                                        <a href="detailpage.html" class="link link_show"></a>
+                                        <a href="#" class="link"></a>
+                                        <div class="date">(2024.12.28 기준)</div>
+                                    </h2>
+                                    <div class="map leftwrap">
+                                        <div class="map_header">
+                                            주주 구성
+                                            <div class="desc"><span>5%이상 대주주</span><span>최대주주 및 특수관계인</span></div>
+                                        </div>
+                                        <div class="map_wrap c4">
+                                            <div class="chart-container chart-top" data-series="12"></div>
+                                            <div class="chart-container chart-sub" data-series="13"></div>
+                                        </div>
+                                    </div>
+                                    <div class="map rightwrap">
+                                        <div class="map_header">
+                                            투자회사 분석
+                                        </div>
+                                        <div class="map_wrap">
+                                            <div class="chart-container" data-series="14"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="show_inner">
+                                    <h2>
+                                        <div class="sort gr">유<div class="tooltip">유가증권시장</div></div>
+                                        <div class="name">엘지</div>
+                                        <a href="detailpage.html" class="link link_show"></a>
+                                        <a href="#" class="link"></a>
+                                        <div class="date">(2024.12.28 기준)</div>
+                                    </h2>
+                                    <div class="map leftwrap">
+                                        <div class="map_header">
+                                            주주 구성
+                                            <div class="desc"><span>5%이상 대주주</span><span>최대주주 및 특수관계인</span></div>
+                                        </div>
+                                        <div class="map_wrap c5">
+                                            <div class="chart-container chart-top" data-series="9"></div>
+                                            <div class="chart-container chart-sub" data-series="10"></div>
+                                        </div>
+                                    </div>
+                                    <div class="map rightwrap">
+                                        <div class="map_header">
+                                            투자회사 분석
+                                            
+                                        </div>
+                                        <div class="map_wrap">
+                                            <div class="chart-container" data-series="11"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <script>
+                        function sortReturn(sort){
+                            if (sort === '코스닥시장') {
+                                return `<div class="sort pp">코<div class="tooltip">코스닥시장</div></div>`;
+                            } else if (sort === '유가증권시장') {
+                                return `<div class="sort gr">유<div class="tooltip">유가증권시장</div></div>`;
+                            } else if (sort === '코넥스시장') {
+                                return `<div class="sort bl">넥<div class="tooltip">코넥스시장</div></div>`;
+                            } else if (sort === '기타') {
+                                return `<div class="sort yl">기<div class="tooltip">기타</div></div>`;
+                            } else {
+                                return ``; 
+                            }
+                        }
+                     
+                        const screenWidth = window.innerWidth;
+                        console.log(screenWidth);
+                        // 화면 너비에 따라 버블 간격 계산
+                        let bubblePaddingValue,
+                            bubbleMinSize,
+                            bubbleMaxSize,
+                            bubbleMinSizeGr,
+                            bubbleMaxSizeGr;
+                        if (screenWidth < 415) { 
+                            bubblePaddingValue = 10;
+                            bubbleMinSize= '70%';
+                            bubbleMaxSize='100%';
+                            bubbleMinSizeGr='80%';
+                            bubbleMaxSizeGr='100%';
+                        }else if (screenWidth < 600) { 
+                            bubblePaddingValue = 10;
+                            bubbleMinSize= '50%';
+                            bubbleMaxSize='90%';
+                            bubbleMinSizeGr='60%';
+                            bubbleMaxSizeGr='100%';
+                        }else if (screenWidth < 1500) { 
+                            bubblePaddingValue = 10;
+                            bubbleMinSize= '50%';
+                            bubbleMaxSize='80%';
+                            bubbleMinSizeGr='45%';
+                            bubbleMaxSizeGr='90%';
+                        }else {                        
+                            bubblePaddingValue = 20;
+                            bubbleMinSize='50%';
+                            bubbleMaxSize='80%';
+                            bubbleMinSizeGr='40%';
+                            bubbleMaxSizeGr='80%';
+                        }
+
+                        //공통 옵션
+                        const chartOpt = {
+                            animation: {
+                                duration: 2000, // 2초 동안 전체 차트 애니메이션
+                                easing: 'easeOutBounce' // 부드러운 easing 효과
+                            },
+                            type: 'packedbubble',
+                            width: null,
+                            height: '100%' ,
+                            backgroundColor: 'transparent',
+                        }
+
+                        const commonDataLabels= {
+                            enabled: true,
+                            useHTML: true, 
+                            allowOverlap: true, // 겹침 허용 → SVG 계산 강제 변경 방지
+                            formatter: function () {
+                                let sortHtml = '';
+                                sortHtml = sortReturn(this.point.sort);
+                                const radius = this.point.marker.width; 
+                                const wonHtml = this.point.won ? '<br>'+this.point.won : '';
+                                const hrefHtml = this.point.href ? '<a href="'+this.point.href+'" class="link link_show"></a>' : '';
+                                return `
+                                <div class="inner_circle inclick" style="width:${radius}px;height:${radius}px">
+                                    <div class="inner">
+                                        <div class="icon_wrap">
+                                            <div class="inner">
+                                                ${sortHtml}
+                                                ${hrefHtml}
+                                            </div>
+                                        </div>
+                                        <div class="name">
+                                            <p>${this.point.name}</p>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="val">${this.point.value}%${wonHtml}</div>
+                                </div>
+                                `;
+                            }
+                        }
+                        
+                        var showcaseChartsArr = [], seriesData = [];
+                        seriesData[0] = [{name:'엘지',sort:'유가증권시장',value:49.95,z:50,href:"https://www.naver.com",link:"link"},{name:'크리스탈 코리아 유한회사',sort:'코스닥시장',value:35,z:40,href:"#"},{name:'크리스탈 코리아 유한회사',sort:'코스닥시장',value:35,z:40,href:"#"}];
+                        seriesData[1] = [{name:'구광모',sort:'',value:4.12,z:10},{name:'구광모2',sort:'',value:3.12,z:10,link:"#"}, {name:'구광모3',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모5',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모3',sort:'',value:1.12,z:10,link:"#"}];
+                        seriesData[2] = [{name:'㈜비즈테크온',sort:'기타',value:35,won:'5,407백만원',z:50,href:"#",color:"#77D0D5"}, {name:'㈜라이트브레인',sort:'코넥스시장',value:20,won:'5,407백만원',z:40,href:"#",color:"#77D0D5"}, {name:'㈜지티이노비전',sort:'기타',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모3',sort:'',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,won:'5,407백만원',z:10,href:"#"}, {name:'구광모5',sort:'',value:1.12,won:'5,407백만원',z:1,link:"#"}];
+
+                        seriesData[3] = [{name:'엘지',sort:'유가증권시장',value:49.95,z:50,href:"https://www.naver.com",link:"link"},{name:'크리스탈 코리아 유한회사',sort:'코스닥시장',value:35,z:40,href:"#"}];
+                        seriesData[4] = [{name:'구광모',sort:'',value:4.12,z:10},{name:'구광모',sort:'',value:4.12,z:10},{name:'구광모2',sort:'',value:3.12,z:10,link:"#"}, {name:'회사',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모5',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모3',sort:'',value:1.12,z:10,link:"#"}];
+                        seriesData[5] = [{name:'㈜비즈테크온',sort:'기타',value:35,won:'5,407백만원',z:50,href:"#",color:"#77D0D5"}, {name:'㈜라이트브레인',sort:'코넥스시장',value:20,won:'5,407백만원',z:40,href:"#",color:"#77D0D5"}, {name:'㈜지티이노비전',sort:'기타',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모3',sort:'',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,won:'5,407백만원',z:10,href:"#"}, {name:'구광모5',sort:'',value:1.12,won:'5,407백만원',z:1,link:"#"}];
+                        seriesData[6] = [{name:'엘지',sort:'유가증권시장',value:49.95,z:50,href:"https://www.naver.com",link:"link"}];
+                        seriesData[7] = [{name:'구광모',sort:'',value:1.12,z:10},{name:'구광모2',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모3',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모5',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모3',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모5',sort:'',value:1.12,z:10,link:"#"}];
+                        seriesData[8] = [{name:'㈜비즈테크온',sort:'기타',value:35,won:'5,407백만원',z:50,href:"#",color:"#77D0D5"}, {name:'㈜라이트브레인',sort:'코넥스시장',value:20,won:'5,407백만원',z:40,href:"#",color:"#77D0D5"}, {name:'㈜지티이노비전',sort:'기타',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모3',sort:'',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,won:'5,407백만원',z:10,href:"#"}, {name:'구광모5',sort:'',value:1.12,won:'5,407백만원',z:1,link:"#"}];
+
+                        seriesData[9] = [{name:'엘지',sort:'유가증권시장',value:49.95,z:50,href:"https://www.naver.com",link:"link"},{name:'크리스탈 코리아 유한회사',sort:'코스닥시장',value:35,z:40,href:"#"},{name:'크리스탈 코리아 유한회사',sort:'코스닥시장',value:35,z:40,href:"#"},{name:'크리스탈 코리아 유한회사',sort:'코스닥시장',value:35,z:40,href:"#"},{name:'크리스탈 코리아 유한회사',sort:'코스닥시장',value:35,z:40,href:"#"}];
+                        seriesData[10] = [{name:'구광모',sort:'',value:1.12,z:10},{name:'구광모3',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,z:10,link:"#"},{name:'구광모5',sort:'',value:1.12,z:10,link:"#"}];
+                        seriesData[11] = [{name:'㈜비즈테크온',sort:'기타',value:35,won:'5,407백만원',z:50,href:"#",color:"#77D0D5"}, {name:'㈜라이트브레인',sort:'코넥스시장',value:20,won:'5,407백만원',z:40,href:"#",color:"#77D0D5"}, {name:'㈜지티이노비전',sort:'기타',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모3',sort:'',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,won:'5,407백만원',z:10,href:"#"}, {name:'구광모5',sort:'',value:1.12,won:'5,407백만원',z:1,link:"#"}];
+                        seriesData[12] = [{name:'엘지',sort:'유가증권시장',value:49.95,z:50,href:"https://www.naver.com",link:"link"},{name:'크리스탈 코리아 유한회사',sort:'코스닥시장',value:35,z:40,href:"#"},{name:'크리스탈 코리아 유한회사',sort:'코스닥시장',value:35,z:40,href:"#"},{name:'크리스탈 코리아 유한회사',sort:'코스닥시장',value:35,z:40,href:"#"}];
+                        seriesData[13] = [{name:'구광모3',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,z:10,link:"#"},{name:'구광모5',sort:'',value:1.12,z:10,link:"#"}];
+                        seriesData[14] = [{name:'㈜비즈테크온',sort:'기타',value:35,won:'5,407백만원',z:50,href:"#",color:"#77D0D5"}, {name:'㈜라이트브레인',sort:'코넥스시장',value:20,won:'5,407백만원',z:40,href:"#",color:"#77D0D5"}, {name:'㈜지티이노비전',sort:'기타',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모2',sort:'',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모3',sort:'',value:1.12,won:'5,407백만원',z:10,link:"#"}, {name:'구광모4',sort:'',value:1.12,won:'5,407백만원',z:10,href:"#"}, {name:'구광모5',sort:'',value:1.12,won:'5,407백만원',z:1,link:"#"}];
+
+
+                        function showcaseChartCreate(){
+                            showcaseChartsArr=[];
+                            const activeSlideCharts = document.querySelectorAll('.swiper-slide-active .chart-container');
+                            activeSlideCharts.forEach((el, idx) => {
+                                const sIndex = parseInt(el.dataset.series, 10);
+                                if (isNaN(sIndex) || !seriesData[sIndex]) return;
+                                var colorVal;
+                                if(idx == 0) {
+                                    colorVal = '#7fa1d4';
+                                }else if(idx == 1){
+                                    colorVal = '#6680a7';
+                                }else{
+                                    colorVal = '#77C1C5';
+                                }
+                                const mins = (idx % 3 === 2) ? bubbleMinSizeGr : bubbleMinSize;
+                                const maxs = (idx % 3 === 2) ? bubbleMaxSizeGr : bubbleMaxSize;
+
+                                const layoutAlgorithm ={
+                                    splitSeries: false,
+                                    seriesInteraction: false,
+                                    gravitationalConstant: 0.02,// 버블 퍼지게
+                                    bubblePadding: bubblePaddingValue,           // 버블 간격
+                                    parentNodeLimit: true,
+                                }
+
+                                const chart = Highcharts.chart(el, {
+                                    chart: chartOpt,
+                                    tooltip: {enabled: false},
+                                    plotOptions: {
+                                        packedbubble: {
+                                            minSize: mins,
+                                            maxSize: maxs,
+                                            zMin: 0,
+                                            zMax: 50,
+                                            layoutAlgorithm: layoutAlgorithm,
+                                            dataLabels: commonDataLabels,
+                                            parentNodeOptions: {
+                                                marker: {
+                                                    radius: 0  // ← 그룹(부모) 원의 반지름. 기본 약 20
+                                                }
+                                            },
+                                            states: {
+                                                hover: {
+                                                    enabled: false,
+                                                }
+                                            },
+                                        }
+                                    },
+                                    series: [{
+                                        color: colorVal,
+                                        borderColor: colorVal,
+                                        borderWidth: 0,
+                                        data: seriesData[sIndex]
+                                    }]
+                                });
+                                
+                                showcaseChartsArr.push(chart);
+                            })
+                            
+                        }
+
+                        var showSwiper  =  new Swiper('.main_show_swiper', {
+                            // effect: 'fade',
+                            fadeEffect: {
+                                crossFade: true
+                            },
+                            loop:true,
+                            navigation: {
+                                nextEl: '.main_show_swiper .swiper-button-next',
+                                prevEl: '.main_show_swiper .swiper-button-prev'
+                            },
+                            pagination: {
+                                el: ".main_show_swiper .swiper-pagination",
+                            },
+                            breakpoints: {
+                                600: {
+                                }
+                            },
+                            on: {
+                                init:function(){
+                                    showcaseChartCreate()
+                                },
+                                slideChangeTransitionStart: function () {
+                                    showcaseChartsArr.forEach(chart => {
+                                        chart.destroy();
+                                    });
+                                    showcaseChartCreate()
+                                }
+                            },
+                        })
+                        window.addEventListener('resize', () => {
+                            // 차트를 다시 생성하거나 update
+                            showcaseChartCreate();
+                        });
+
+                    </script>
+
+                    <div class="bot_btn_wrap">
+                        <a href="#" class="btn btn_rounded">지배 구조 전체보기</a>
+                        <a href="#" class="btn btn_rounded" onclick="modal.open('otrCprInvstmnt');return false;">타법인 출자 현황 보기</a>
+                    </div>
+                    <div class="scrollani" onclick=" window.scrollBy({top: window.innerHeight,behavior: 'smooth'});" tabindex="-1"><div class="arrow"></div><div class="arrow"></div></div>
+                </div>
+            </section>
+            
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="f_m_group">
+                    <ul>
+                        <li><a href="https://company.etoday.co.kr/" class="click-trc" data-name="main_ft_company" target="_blank">회사소개</a></li>
+                        <li><a href="javascript:;" onclick="footer_popup('tab01')" class="click-trc" data-name="main_ft_policy_1">이용약관</a></li>
+                        <li class="f_point"><a href="javascript:;" onclick="footer_popup('tab02')" class="click-trc" data-name="main_ft_policy_2">개인정보처리방침</a></li>
+                        <li><a href="javascript:;" onclick="footer_popup('tab03')" class="click-trc" data-name="main_ft_policy_3">청소년보호정책</a></li>
+                        <li><a href="javascript:;" onclick="footer_popup('tab04')" class="click-trc" data-name="main_ft_policy_4">고충처리</a></li>
+                        <li><a href="https://company.etoday.co.kr/company_info/location" class="click-trc" data-name="main_ft_location" target="_blank">이용문의</a></li>
+                        <li><a href="https://member.etoday.co.kr/subs/" class="click-trc" data-name="main_ft_subscribe" target="_blank">신문/PDF 구독</a></li>
+                        <li><a href="https://www.etoday.co.kr/rss/" class="click-trc" data-name="main_ft_rss">RSS<span class="rss_ico img_element"></span></a></li>
+                        <li><a href="https://www.etoday.co.kr/sitemap/" class="click-trc" data-name="main_ft_sitemap">사이트맵</a></li>
+                    </ul>
+                    <div class="f_share_icons">
+                        <a href="https://www.youtube.com/user/etodaycokr" class="sns_youtube" target="_blank"></a>
+                        <a href="https://tv.naver.com/etoday" class="sns_navertv" target="_blank"></a>
+                        <a href="https://tv.kakao.com/channel/2882570/video" class="sns_kakaotv" target="_blank"></a>
+                        <a href="https://www.facebook.com/etoday/" class="sns_facebook" target="_blank"></a>
+                        <a href="https://blog.naver.com/etoday12" class="sns_naverblog" target="_blank"></a>
+                        <a href="https://twitter.com/etodaynews" class="sns_x"target="_blank"></a>
+                        <a href="https://www.instagram.com/etoday_newsplus/" class="sns_instagram" target="_blank"></a>                                                   
+                    </div>
+                </div>
+                <div class="foot_info">
+                    <p><span><strong>이투데이 (제호 : 이투데이)</strong> 서울시 강남구 강남대로 556 이투데이빌딩</span><span>TEL 02-799-2600</span></p>
+                    <p><span>등록번호 : 서울아00197</span><span>등록일자 : 2006.04.27</span><span>발행일자 : 2006.04.27</span><span>발행인 : 김상우</span><span>편집인 : 이종재</span><span>청소년보호책임자 : 이초희</span></p>
+                    <p class="copyright">Copyright 2025. 이투데이. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="loader_wrap"><div class="loader"></div></div>
+
+        <div class="modal modal_otrCprInvstmnt">
+            <div class="modal_wrap">
+                <div class="modal_inner">
+                    <div class="modal_header">
+                        <h5>엘지씨엔에스 타법인 출자 현황</h5>
+                        <a href="#" class="btn_modal_close" onclick="modal.close('otrCprInvstmnt');return false;">닫기</a>
+                    </div>
+                    <div class="modal_contents">
+                        <div class="table_wrap">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>법인명</th>
+                                        <th>최초취득일자</th>
+                                        <th>출자목적</th>
+                                        <th>기말잔액(수량)</th>
+                                        <th>기말잔액(지분율)</th>
+                                        <th>기말잔액(장부가액)</th>
+                                        <th>최근사업연도 재무현황<br>(총자산)</th>
+                                        <th>최근사업연도 재무현황<br>(당기순이익)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>㈜비즈테크아이</td>
+                                        <td>2007.08.23</td>
+                                        <td>경영참여</td>
+                                        <td>10,375,721</td>
+                                        <td>96.09</td>
+                                        <td>10,015,000,000</td>
+                                        <td>90,093,000,000</td>
+                                        <td>8,781,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜행복마루</td>
+                                        <td>2016.09.07</td>
+                                        <td>경영참여</td>
+                                        <td>140,000</td>
+                                        <td>100.00</td>
+                                        <td>700,000,000</td>
+                                        <td>3,263,000,000</td>
+                                        <td>413,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜오픈소스컨설팅 (*5)</td>
+                                        <td>2019.07.01</td>
+                                        <td>경영참여</td>
+                                        <td>244,292</td>
+                                        <td>73.06</td>
+                                        <td>7,922,000,000</td>
+                                        <td>13,690,000,000</td>
+                                        <td>-619,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜라이트브레인 (*5)</td>
+                                        <td>2021.12.10</td>
+                                        <td>경영참여</td>
+                                        <td>204,300</td>
+                                        <td>61.91</td>
+                                        <td>5,407,000,000</td>
+                                        <td>10,889,000,000</td>
+                                        <td>36,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜비즈테크온</td>
+                                        <td>2022.07.01</td>
+                                        <td>경영참여</td>
+                                        <td>2,158,849</td>
+                                        <td>96.09</td>
+                                        <td>2,084,000,000</td>
+                                        <td>16,320,000,000</td>
+                                        <td>1,903,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>(주)지티이노비젼 (*2)</td>
+                                        <td>2024.03.07</td>
+                                        <td>경영참여</td>
+                                        <td>45,800</td>
+                                        <td>55.05</td>
+                                        <td>5,953,000,000</td>
+                                        <td>11,977,000,000</td>
+                                        <td>92,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LG CNS China Inc.</td>
+                                        <td>2001.04.01</td>
+                                        <td>경영참여</td>
+                                        <td>-</td>
+                                        <td>100.00</td>
+                                        <td>23,232,000,000</td>
+                                        <td>93,425,000,000</td>
+                                        <td>14,792,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LG CNS America, Inc.</td>
+                                        <td>2003.07.01</td>
+                                        <td>경영참여</td>
+                                        <td>100</td>
+                                        <td>100.00</td>
+                                        <td>2,883,000,000</td>
+                                        <td>270,702,000,000</td>
+                                        <td>34,396,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LG CNS Europe B.V.</td>
+                                        <td>2003.03.01</td>
+                                        <td>경영참여</td>
+                                        <td>5,000</td>
+                                        <td>100.00</td>
+                                        <td>3,657,000,000</td>
+                                        <td>55,572,000,000</td>
+                                        <td>3,733,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PT. LG CNS Indonesia</td>
+                                        <td>2005.12.01</td>
+                                        <td>경영참여</td>
+                                        <td>20,000</td>
+                                        <td>100.00</td>
+                                        <td>-</td>
+                                        <td>22,933,000,000</td>
+                                        <td>-350,000,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal_rank">
+            <div class="modal_wrap">
+                <div class="modal_inner">
+                    <div class="modal_header">
+                        <h5>기업 랭킹 분석</h5>
+                        <a href="#" class="btn_modal_close" onclick="modal.close('rank');return false;">닫기</a>
+                    </div>
+                    <div class="modal_contents">
+                        <div class="rank_header">
+                            <div class="rank_title">2024년 당기순이익 Top 10기업은?</div>
+                            <div class="sm">단위:억원</div>
+                        </div>
+                        <div class="chart">
+                            <div id="inRank"></div>
+                            
+                        </div>
+                        <div class="table_wrap">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>순위</th>
+                                        <th>기업명</th>
+                                        <th>당기순이익(억원)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="left">삼성전자</td>
+                                        <td>12,923</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="left">sk하이닉스</td>
+                                        <td>10923</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="left">현대자동차</td>
+                                        <td>8779</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="left">기아</td>
+                                        <td>7223</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="left">삼성생명</td>
+                                        <td>6191</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td class="left">한국전력공사</td>
+                                        <td>5174</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td class="left">한화생명</td>
+                                        <td>4132</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td class="left">미래에셋증권</td>
+                                        <td>3089</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td class="left">NH투자증권</td>
+                                        <td>2067</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="left">삼성증권</td>
+                                        <td>1911</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function modalGraph(){
+                Highcharts.chart('inRank', {
+                    chart: {
+                        type: 'column'
+                    },
+                    xAxis: {
+                        type: 'category',
+                    },
+                    yAxis: {
+                        min: 0,
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    tooltip: {
+                        pointFormat: '{point.y:.1f}'
+                    },
+                    series: [{
+                        pointWidth: 20 ,
+                        color: {
+                            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 }, // 위 → 아래
+                            stops: [
+                                [0, '#1673DA'],   // 시작 색
+                                [1, '#72ADEE']    // 끝 색
+                            ]
+                        },
+                        groupPadding: 0,
+                        data: [
+                            ['삼성전자', 12923],
+                            ['sk하이닉스', 10923],
+                            ['현대자동차', 8779],
+                            ['기아', 7223],
+                            ['삼성생명', 6191],
+                            ['한국전력공사', 5174],
+                            ['한화생명', 4132],
+                            ['미래에셋증권', 3089],
+                            ['NH투자증권', 2067],
+                            ['삼성증권', 1911],
+                        ],
+                    }]
+                });
+            }
+        </script>
+    </div>
+    
+    <script src="/assets/js/page.js"></script>
+</body>
+</html>
